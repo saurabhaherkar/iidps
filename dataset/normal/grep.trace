@@ -1,0 +1,66 @@
+execve("/bin/grep", ["grep"], 0x7fff05a095b0 /* 11 vars */) = 0
+brk(NULL)                               = 0x55f37f270000
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=11270, ...}) = 0
+mmap(NULL, 11270, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f321d2e6000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libpcre.so.3", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0 \25\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=464824, ...}) = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f321d2e4000
+mmap(NULL, 2560264, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f321ce50000
+mprotect(0x7f321cec0000, 2097152, PROT_NONE) = 0
+mmap(0x7f321d0c0000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x70000) = 0x7f321d0c0000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libdl.so.2", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\16\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=14560, ...}) = 0
+mmap(NULL, 2109712, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f321cc4c000
+mprotect(0x7f321cc4f000, 2093056, PROT_NONE) = 0
+mmap(0x7f321ce4e000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f321ce4e000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260\34\2\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=2030544, ...}) = 0
+mmap(NULL, 4131552, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f321c85b000
+mprotect(0x7f321ca42000, 2097152, PROT_NONE) = 0
+mmap(0x7f321cc42000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1e7000) = 0x7f321cc42000
+mmap(0x7f321cc48000, 15072, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f321cc48000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libpthread.so.0", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0000b\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=144976, ...}) = 0
+mmap(NULL, 2221184, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f321c63c000
+mprotect(0x7f321c656000, 2093056, PROT_NONE) = 0
+mmap(0x7f321c855000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19000) = 0x7f321c855000
+mmap(0x7f321c857000, 13440, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f321c857000
+close(3)                                = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f321d2e2000
+arch_prctl(ARCH_SET_FS, 0x7f321d2e2b80) = 0
+mprotect(0x7f321cc42000, 16384, PROT_READ) = 0
+mprotect(0x7f321c855000, 4096, PROT_READ) = 0
+mprotect(0x7f321ce4e000, 4096, PROT_READ) = 0
+mprotect(0x7f321d0c0000, 4096, PROT_READ) = 0
+mprotect(0x55f37d700000, 4096, PROT_READ) = 0
+mprotect(0x7f321d2e9000, 4096, PROT_READ) = 0
+munmap(0x7f321d2e6000, 11270)           = 0
+set_tid_address(0x7f321d2e2e50)         = 96
+set_robust_list(0x7f321d2e2e60, 24)     = 0
+rt_sigaction(SIGRTMIN, {sa_handler=0x7f321c641cb0, sa_mask=[], sa_flags=SA_RESTORER|SA_SIGINFO, sa_restorer=0x7f321c64e890}, NULL, 8) = 0
+rt_sigaction(SIGRT_1, {sa_handler=0x7f321c641d50, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f321c64e890}, NULL, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+brk(NULL)                               = 0x55f37f270000
+brk(0x55f37f291000)                     = 0x55f37f291000
+write(2, "Usage: grep [OPTION]... PATTERN "..., 42) = 42
+write(2, "Try 'grep --help' for more infor"..., 40) = 40
+close(1)                                = 0
+close(2)                                = 0
+exit_group(2)                           = ?
++++ exited with 2 +++

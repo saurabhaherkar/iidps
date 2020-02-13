@@ -1,0 +1,73 @@
+execve("/usr/sbin/service", ["service"], 0x7ffd6cdaee20 /* 11 vars */) = 0
+brk(NULL)                               = 0x559b217e6000
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=11270, ...}) = 0
+mmap(NULL, 11270, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fa8bfc92000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260\34\2\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=2030544, ...}) = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fa8bfc90000
+mmap(NULL, 4131552, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fa8bf67d000
+mprotect(0x7fa8bf864000, 2097152, PROT_NONE) = 0
+mmap(0x7fa8bfa64000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1e7000) = 0x7fa8bfa64000
+mmap(0x7fa8bfa6a000, 15072, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fa8bfa6a000
+close(3)                                = 0
+arch_prctl(ARCH_SET_FS, 0x7fa8bfc91540) = 0
+mprotect(0x7fa8bfa64000, 16384, PROT_READ) = 0
+mprotect(0x559b20556000, 8192, PROT_READ) = 0
+mprotect(0x7fa8bfc95000, 4096, PROT_READ) = 0
+munmap(0x7fa8bfc92000, 11270)           = 0
+getuid()                                = 0
+getgid()                                = 0
+getpid()                                = 27
+rt_sigaction(SIGCHLD, {sa_handler=0x559b2034d200, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER, sa_restorer=0x7fa8bf6bbf20}, NULL, 8) = 0
+geteuid()                               = 0
+brk(NULL)                               = 0x559b217e6000
+brk(0x559b21807000)                     = 0x559b21807000
+getppid()                               = 25
+stat("/trace", {st_mode=S_IFDIR|0777, st_size=4096, ...}) = 0
+stat(".", {st_mode=S_IFDIR|0777, st_size=4096, ...}) = 0
+openat(AT_FDCWD, "/usr/sbin/service", O_RDONLY) = 3
+fcntl(3, F_DUPFD, 10)                   = 10
+close(3)                                = 0
+fcntl(10, F_SETFD, FD_CLOEXEC)          = 0
+geteuid()                               = 0
+getegid()                               = 0
+rt_sigaction(SIGINT, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x559b2034d200, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER, sa_restorer=0x7fa8bf6bbf20}, NULL, 8) = 0
+rt_sigaction(SIGQUIT, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER, sa_restorer=0x7fa8bf6bbf20}, NULL, 8) = 0
+rt_sigaction(SIGTERM, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGTERM, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER, sa_restorer=0x7fa8bf6bbf20}, NULL, 8) = 0
+read(10, "#!/bin/sh\n\n#####################"..., 8192) = 8192
+pipe([3, 4])                            = 0
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7fa8bfc91810) = 28
+close(4)                                = 0
+read(3, "service\n", 128)               = 8
+read(3, "", 128)                        = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=28, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+rt_sigreturn({mask=[]})                 = 0
+close(3)                                = 0
+wait4(-1, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 28
+pipe([3, 4])                            = 0
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7fa8bfc91810) = 29
+close(4)                                = 0
+read(3, "service\n", 128)               = 8
+read(3, "", 128)                        = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=29, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+rt_sigreturn({mask=[]})                 = 0
+close(3)                                = 0
+wait4(-1, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 29
+fcntl(1, F_DUPFD, 10)                   = 11
+close(1)                                = 0
+fcntl(11, F_SETFD, FD_CLOEXEC)          = 0
+dup2(2, 1)                              = 1
+write(1, "Usage: service < option > | --st"..., 89) = 89
+dup2(11, 1)                             = 1
+close(11)                               = 0
+exit_group(1)                           = ?
++++ exited with 1 +++
